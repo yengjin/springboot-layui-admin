@@ -1,9 +1,9 @@
 # 基于SpringBoot与LayUI的后台管理系统
 一套SpringBoot+MyBatis+FreeMarker+LayUI的后台管理系统.
 适用于**小体量,CRUD业务为主的后台系统快速搭建和学习**. 
-在学习过程中发现很多地方网上没有给出一个整套的案例, 因此想和众多大神们一起讨论共同进步.
+在学习过程中发现很多地方网上没有给出一个整套的案例, 因此进行开源.
 
-由于时间仓促, 没有加入权限验证和Redis等功能.但对于SpringBoot+LayUI开发来说是一个很好的小例子.
+由于时间仓促, 没有加入权限验证和Redis等功能.但对于SpringBoot+LayUI开发来说是一个很好的例子.
 
 ![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/007965B6D0714609B17C891FB951CB05/4938)
 ![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/F96F700BCBB5484E9C91AD0D4EC6BB65/4937)
@@ -39,4 +39,5 @@
 - 下载中心
 
 注: 登录页面的背景图片引用自知乎首页, 请自行更换
+联系方式: 450298429@qq.com
 ## Developed By BruceYan
