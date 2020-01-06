@@ -25,7 +25,7 @@
 - Layer弹窗Form组件渲染不出来的问题(使用回调函数)
 - Layui数据表格分页问题
 - 实时模糊匹配查询/数据表格重新渲染
-- Layui+SpringBoot文件下载的一些手段
+- Layui+SpringBoot文件下载
 
 ## 包含模块:
 - 权限管理
