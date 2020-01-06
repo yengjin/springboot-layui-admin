@@ -41,11 +41,11 @@ public class EmployeeController {
         return ResponseUtil.general_response("success update employee!");
     }
 
-    // 查询
+    // 查询, query传入LAYUI查询参数
     @GetMapping("/employees")
     public Object getEmployees(PageHelper pageHelper, String query) throws Exception {
         //System.out.println(request.getParameter("abc"));
-        System.out.println(query);
+        //System.out.println(query);
         Map<Object, Object> map = pageHelper.getMap();
         HashMap queryMap = null;
         // 进行拼接, 拼接成一个MAP查询

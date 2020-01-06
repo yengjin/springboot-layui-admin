@@ -79,8 +79,8 @@ public class FileController {
     // 文件上传
     @PostMapping("/files/upload")
     public Object uploadFile(MultipartFile file) throws Exception {
-        System.out.println(filePath);
-        System.out.println(file.getOriginalFilename());
+       // System.out.println(filePath);
+        //System.out.println(file.getOriginalFilename());
         String extName = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
         String fileName = UUID.randomUUID().toString() + extName;
         FileCopyUtils.copy(file.getInputStream(), new FileOutputStream(new File(filePath + fileName)));

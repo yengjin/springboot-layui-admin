@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../layui/css/layui.css">
 </head>
 <body>
-<div class="layui-form" style="margin-top: 20px">
+<form class="layui-form" style="margin-top: 20px">
     <div class="layui-form-item" style="padding-right: 50px;">
         <label class="layui-form-label">姓名</label>
         <div class="layui-input-block">
@@ -77,10 +77,10 @@
     <div class="layui-form-item" style="padding-right: 30px; width: 300px; margin: 0 auto; margin-top: 15px">
         <div class="layui-input-block">
             <button class="layui-btn" lay-submit lay-filter="formDemo" id="submit-btn">提交</button>
-            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
-</div>
+</form>
 
 <script>
     var layerCallback;  // 子页面回调函数
@@ -100,7 +100,6 @@
             console.log(data.departments[i]);
         }*/
     }
-    
     function selectorAppend() {
         /*进行下拉框动态拼接*/
         console.log(positionsIdAndName);
