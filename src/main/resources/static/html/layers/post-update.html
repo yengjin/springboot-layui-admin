@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>公告更新子页面</title>
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../layui/layui.js"></script>
     <link rel="stylesheet" href="../../layui/css/layui.css">
@@ -49,12 +49,14 @@
             $.ajax({
                 url: '/posts',
                 method: 'put',
-                data: {
+                data: JSON.stringify({
                     id: parent_json.id,
                     title: $("#post-title").val(),
                     content: $("#post-content").val()
-                },
+                }),
+                contentType: "application/json",
                 success: function (res) {
+                    console.log(res);
                     if (res.code == 200) {
                         parent.layerCallback($("#post-title").val(), $("#post-content").val());
                         parent.layer.msg('修改公告成功', {icon: 1});

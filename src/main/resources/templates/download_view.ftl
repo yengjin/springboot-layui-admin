@@ -118,7 +118,7 @@
                 {field:'username', width:150, title: '创建者'},
                 {field:'createdTime', width:180, title: '创建时间', sort: true},
                 {field:'filename', width: 120, title: 'sdfsd', hide: true},
-                {fixed: 'right', align:'center', toolbar: '#barTpl'}
+                {fixed: 'right', width:180, align:'center', toolbar: '#barTpl'}
             ]]
             ,page: true
         });

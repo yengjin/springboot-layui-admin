@@ -41,7 +41,7 @@ public class PostController {
 
     // 更改
     @PutMapping("/posts")
-    public Object updatePost(Post post) {
+    public Object updatePost(@RequestBody Post post) {
         System.out.println(post);
         if (postService.update(post) > 0) {
             return ResponseUtil.general_response("success updated!");

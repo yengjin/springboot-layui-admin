@@ -168,7 +168,7 @@
                 json = JSON.stringify(obj.data);
                 layer.open({
                     title: '编辑公告',
-                    content: './layers/post-update.html',
+                    content: 'static/html/layers/post-update.html',
                     type: 2,
                     //content: $("#post-insert").text(),
 
