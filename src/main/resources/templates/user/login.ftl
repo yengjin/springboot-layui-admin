@@ -79,7 +79,7 @@
         <div class="layui-header" style="background-color: #2066CE">
             <div style="padding-left: 5px; width: 600px; height: 60px">
                 <!-- 在这里替换具体的LOGO和标语 -->
-                <img width="120px" src="static/images/logos/diandian-logo-login.png" style="float: left; margin-top: 5px">
+                <img width="120px" src="static/images/logos/diandian-logo.png" style="float: left; margin-top: 5px">
                 <!-- color:#009688-->
                 <div style="color: #E6E6E6; margin-left:20px;float:left;width:200px;height:100%;line-height:60px;text-align:left;font-size:16px;">SpringBoot+LayUI后台管理系统</div>
             </div>
