@@ -8,7 +8,7 @@
 ![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/007965B6D0714609B17C891FB951CB05/4938)
 ![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/F96F700BCBB5484E9C91AD0D4EC6BB65/4937)
 ## 使用方法 How To Use
-1. 创建数据库hrm, 导入hrm.sql文件至数据库.
+1. 在MySQL(作者5.7)中创建数据库hrm, 导入hrm.sql文件至数据库.
 2. 导入Maven工程
 3. 运行Application.java
 4. 在userauth表中添加帐号
