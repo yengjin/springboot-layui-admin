@@ -11,10 +11,11 @@
 ## 使用方法 How To Use
 1. 在MySQL(作者5.7)中创建数据库, 导入admin.sql文件至数据库.
 2. 导入Maven工程
-3. 运行Application.java
-4. 在userauth表中添加帐号
+3. 修改相关配置application.properties
+4. 在userauth表中添加测试帐号
 5. 在D盘根目录下创建hrm-upload文件夹,用于文件上传 (可通过配置文件更改)
-5. 访问http://localhost/login 登录即可使用
+6. 运行Application.java
+7. 访问http://localhost/login 登录即可使用
 
 ## 特色/解决的一些问题:
 ### 后端:
