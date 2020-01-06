@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.geek51.domain.Employee">
+  <resultMap id="BaseResultMap" type="cn.geek51.domain.Employee">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="sex" jdbcType="BIT" property="sex" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="idcard" jdbcType="VARCHAR" property="idcard" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <association property="position" javaType="cn.geek51.domain.Position" column="position_id" select="cn.geek51.domain.Position.selectOneByPrimaryKey"/>
+    <association property="department" javaType="cn.geek51.domain.Department" column="dept_id" select="cn.geek51.domain.Department.selectOneByPrimaryKey"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, sex, phone, email, education, idcard, address, position_id, dept_id, created_time
+  </sql>
+  <select id="selectOneByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from employee
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectAllByParams" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" /> FROM employee
+    <where>
+      <trim suffixOverrides="AND">
+        <if test="id != null">
+          id=#{id} AND
+        </if>
+        <if test="name != null">
+          name=#{name}AND
+        </if>
+        <if test="sex != null">
+          sex=#{sex} AND
+        </if>
+        <if test="phone != null">
+          phone=#{phone} AND
+        </if>
+        <if test="email != null">
+          email=#{email} AND
+        </if>
+        <if test="education != null">
+          education=#{education} AND
+        </if>
+        <if test="idcard != null">
+          idcard=#{idcard} AND
+        </if>
+        <if test="address != null">
+          address=#{address} AND
+        </if>
+        <if test="position != null">
+          position_id=#{position.id} AND
+        </if>
+        <if test="department != null">
+          dept_id=#{department.id} AND
+        </if>
+        <if test="createdTime != null">
+          created_time=#{created_time} AND
+        </if>
+        <if test="qname != null">
+          name LIKE concat('%', concat(#{qname}, '%')) AND
+        </if>
+        <if test="qphone != null">
+          phone LIKE concat('%', concat(#{qphone}, '%')) AND
+        </if>
+        <if test="qidcard != null">
+          idcard LIKE concat('%', concat(#{qidcard}, '%')) AND
+        </if>
+      </trim>
+    </where>
+  </select>
+
+  <delete id="deleteOneByParams">
+    delete from employee
+    <where>
+      <trim suffixOverrides=",">
+        <if test="id != null">
+          id=#{id,jdbcType=INTEGER},
+        </if>
+        <if test="name != null">
+          name=#{name,jdbcType=VARCHAR},
+        </if>
+        <if test="sex != null">
+          sex=#{sex,jdbcType=BIT},
+        </if>
+        <if test="phone != null">
+          phone=#{phone,jdbcType=VARCHAR},
+        </if>
+        <if test="email != null">
+          email=#{email,jdbcType=VARCHAR},
+        </if>
+        <if test="education != null">
+          education=#{education,jdbcType=VARCHAR},
+        </if>
+        <if test="idcard != null">
+          idcard=#{idcard,jdbcType=VARCHAR},
+        </if>
+        <if test="address != null">
+          address=#{address,jdbcType=VARCHAR},
+        </if>
+        <if test="position != null">
+          position_id=#{position.id,jdbcType=INTEGER},
+        </if>
+        <if test="department != null">
+          dept_id=#{department.id,jdbcType=INTEGER},
+        </if>
+        <if test="createdTime != null">
+          created_time=#{createdTime,jdbcType=TIMESTAMP},
+        </if>
+      </trim>
+    </where>
+  </delete>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from employee
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.geek51.domain.Employee">
+    insert into employee (id, name, sex, phone, 
+      email, education, idcard, 
+      address, position_id, dept_id,
+      created_time)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=BIT}, #{phone,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{idcard,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{position.id,jdbcType=INTEGER}, #{dept.id,jdbcType=INTEGER},
+      #{createdTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.geek51.domain.Employee">
+    insert into employee
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="education != null">
+        education,
+      </if>
+      <if test="idcard != null">
+        idcard,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="position != null">
+        position_id,
+      </if>
+      <if test="department != null">
+        dept_id,
+      </if>
+      <if test="createdTime != null">
+        created_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=BIT},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null">
+        #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        #{position.id,jdbcType=INTEGER},
+      </if>
+      <if test="department != null">
+        #{department.id,jdbcType=INTEGER},
+      </if>
+      <if test="createdTime != null">
+        #{createdTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.geek51.domain.Employee">
+    update employee
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=BIT},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        education = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null">
+        idcard = #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        position_id = #{position.id,jdbcType=INTEGER},
+      </if>
+      <if test="department != null">
+        dept_id = #{department.id,jdbcType=INTEGER},
+      </if>
+      <if test="createdTime != null">
+        created_time = #{createdTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.geek51.domain.Employee">
+    update employee
+    set name = #{name,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=BIT},
+      phone = #{phone,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      idcard = #{idcard,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      position_id = #{positionId,jdbcType=INTEGER},
+      dept_id = #{deptId,jdbcType=INTEGER},
+      created_time = #{createdTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="getCount" resultType="int">
+    SELECT COUNT(*) FROM employee;
+  </select>
+</mapper>
