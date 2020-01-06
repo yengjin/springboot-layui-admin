@@ -1,13 +1,16 @@
 # 基于SpringBoot与LayUI的后台管理系统
 一套SpringBoot+MyBatis+FreeMarker+LayUI的后台管理系统.
 适用于**小体量后台系统快速搭建和学习**. 
-由于时间仓促, 没有加入权限验证和Redis等. 业务基本上是CRUD.但对于SpringBoot+LayUI开发来说是一个很好的小例子
+自己做的一个小项目, 学习过程中发现很多地方网上没有给出一个整套的案例, 因此想和众多大神们一起讨论共同进步.
+由于时间仓促, 没有加入权限验证和Redis等功能. 业务基本上是CRUD.但对于SpringBoot+LayUI开发来说是一个很好的小例子
+
 
 ## 使用方法 How To Use
-1. 导入hrm.sql文件至数据库.
-2. 导入工程
+1. 创建数据库hrm, 导入hrm.sql文件至数据库.
+2. 导入Maven工程
 3. 运行Application.java
 4. 在userauth表中添加帐号
+5. 在D盘根目录下创建hrm-upload文件夹,用于文件上传 (可通过配置文件更改)
 5. 访问http://localhost/login 登录即可使用
 
 ## 特色/解决的一些问题:
@@ -22,7 +25,7 @@
 - Layer弹窗Form组件渲染不出来的问题(使用回调函数)
 - Layui数据表格分页问题
 - 实时模糊匹配查询/数据表格重新渲染
-- Layui+SpringBoot文件下载
+- Layui+SpringBoot文件下载的一些手段
 
 ## 包含模块:
 - 权限管理
