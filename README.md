@@ -5,10 +5,11 @@
 
 由于时间仓促, 没有加入权限验证和Redis等功能.但对于SpringBoot+LayUI开发来说是一个很好的例子.
 
-![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/007965B6D0714609B17C891FB951CB05/4938)
-![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/F96F700BCBB5484E9C91AD0D4EC6BB65/4937)
+![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/35F174830F724A89AAC2B1E3BB20B455/4953)
+![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/522EA345E7774CEAA9FC6242FD6ABD7B/4957)
+![](https://note.youdao.com/yws/public/resource/58918c59a59ab57824426ac85e456ea7/xmlnote/F8C9999E4F2B4CF58D66E039DB001899/4959)
 ## 使用方法 How To Use
-1. 在MySQL(作者5.7)中创建数据库hrm, 导入hrm.sql文件至数据库.
+1. 在MySQL(作者5.7)中创建数据库, 导入admin.sql文件至数据库.
 2. 导入Maven工程
 3. 运行Application.java
 4. 在userauth表中添加帐号
@@ -39,6 +40,8 @@
 - 下载中心
 
 注: 登录页面的背景图片引用自知乎首页, 请自行更换.
+
+有任何问题或者建议, 欢迎联系交流!
 
 联系方式: 450298429@qq.com
 ## Developed By BruceYan
