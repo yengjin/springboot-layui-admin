@@ -46,6 +46,9 @@
         </if>
       </trim>
     </where>
+    <if test="start != null and count != null">
+      LIMIT #{start}, #{count}
+    </if>
   </select>
 
   <delete id="deleteOneByParams">
