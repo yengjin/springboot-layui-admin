@@ -30,7 +30,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item"><a id="logout-a" href="/">注销</a></li>
-            <li class="layui-nav-item"><a href="http://diandian2.cn">注销</a></li>
+            <li class="layui-nav-item"><a href="http://diandian2.cn">社区</a></li>
         </ul>
     </div>
 

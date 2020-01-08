@@ -44,7 +44,7 @@ public class UserAuthController {
     // 新建管理员
     @PostMapping("/auths")
     public Object postUserAuths(UserAuth auth) {
-        //System.out.println(auth);
+        System.out.println(auth);
         service.save(auth);
         return ResponseUtil.general_response("success create userauth!");
     }

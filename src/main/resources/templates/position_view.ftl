@@ -59,7 +59,7 @@
             ,cols: [[
                 {field:'id', width:80, title: 'ID'},
                 {field:'name', width:150, title: '职位名称', edit: true},
-                {field:'description', width:120, title:'职位描述', edit: true},
+                {field:'description', width:200, title:'职位描述', edit: true},
                 {field:'createdTime', width:180, title: '创建时间', sort: true},
                 {fixed: 'right', width:150, align:'center', toolbar: '#barTpl'}
             ]]

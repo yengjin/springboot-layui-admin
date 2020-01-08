@@ -46,13 +46,8 @@
     //Demo
     layui.use('form', function(){
         var form = layui.form;
-        var ajaxData = {
-            username: $("#auth-username").val(),
-            name: $("#auth-name").val(),
-            password: $("#auth-password").val(),
-            isAdmin: $("#auth-isAdmin").prop("checked"),
-            createdTime: new Date()
-        }
+        var callbackData;
+        var nowDate = new Date();
         //监听提交
         form.on('submit(formDemo)', function(data){
             $.ajax({
@@ -60,13 +55,19 @@
                 method: 'post',
                 data: {
                     username: $("#auth-username").val(),
-                    name: $("#auth-name").val(),
                     password: $("#auth-password").val(),
-                    isAdmin: $("#auth-isAdmin").prop("checked")
+                    isAdmin: $("#auth-isAdmin").prop("checked"),
+                    createdTime: nowDate
                 },
                 success: function (res) {
                     if (res.code == 200) {
-                        parent.layerCallback($("#post-title").val(), $("#post-content").val());
+                        callbackData = {
+                            username: $("#auth-username").val(),
+                            password: $("#auth-password").val(),
+                            isAdmin: $("#auth-isAdmin").prop("checked"),
+                            createdTime: nowDate
+                        }
+                        parent.layerCallback(callbackData);
                         parent.layer.msg('添加用户成功', {icon: 1});
                         var index = parent.layer.getFrameIndex(window.name);
                         parent.layer.close(index);

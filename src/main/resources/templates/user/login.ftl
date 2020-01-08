@@ -81,7 +81,7 @@
                 <!-- 在这里替换具体的LOGO和标语 -->
                 <img width="120px" src="static/images/logos/diandian-logo.png" style="float: left; margin-top: 5px">
                 <!-- color:#009688-->
-                <div style="color: #E6E6E6; margin-left:20px;float:left;width:200px;height:100%;line-height:60px;text-align:left;font-size:16px;">SpringBoot+LayUI后台管理系统</div>
+                <div style="color: #E6E6E6; margin-left:20px;float:left;width:300px;height:100%;line-height:60px;text-align:left;font-size:16px;">SpringBoot+LayUI后台管理系统</div>
             </div>
 
             <ul class="layui-nav layui-layout-right" style="background-color: #2066CE">
@@ -94,12 +94,11 @@
                         <dd><a href="">更改密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">注销</a></li>
-                <li class="layui-nav-item"><a href="http://diandian2.cn">民大点点</a></li>
+                <li class="layui-nav-item"><a href="http://diandian2.cn">点点OJ</a></li>
             </ul>
         </div>
     </div>
-    <div style="opacity: 0.9; position: absolute; background: #FFFFFF;border-radius: 10px;left: 50%; width: 450px; height: 300px; margin-left: -220px; margin-top: 100px; padding-left: 50px; padding-top: 50px;box-shadow: 0 0 10px 3px #a9a2a0">
+    <div style="opacity: 0.9; position: absolute; background: #FFFFFF;border-radius: 10px;left: 50%; width: 450px; height: 300px; margin-left: -250px; margin-top: 100px; padding-left: 40px; padding-top: 50px;box-shadow: 0 0 10px 3px #a9a2a0">
         <div style="text-align: center; font-size: 20px; margin-right: 50px; margin-bottom: 30px">登录</div>
         <div class="layui-form">
             <div class="layui-form-item" style="font-size: 16px; opacity: 1">

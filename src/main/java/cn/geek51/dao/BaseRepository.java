@@ -25,15 +25,10 @@ public class BaseRepository<T> {
         Class<T> tClass = (Class<T>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
         return tClass.getName();
     }
-
     @Autowired
     protected SqlSessionTemplate sqlSessionTemplate;
 
-    /**
-     * 插入数据
-     * @param param
-     * @return
-     */
+    /*插入数据*/
     public int insertSelective(Object param, String nameSpace) {
         String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
         return sqlSessionTemplate.insert(nameSpace + methodName, param);
