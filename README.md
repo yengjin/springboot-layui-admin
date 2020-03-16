@@ -40,6 +40,9 @@
 - 部门管理
 - 下载中心
 
+## 通用CRUD类图
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS81ODkxOGM1OWE1OWFiNTc4MjQ0MjZhYzg1ZTQ1NmVhNy94bWxub3RlL0JBRDk2MTY2QkRBRjRERUFBMzRERTkyM0Q0Q0RCQkNFLzQ5MzA?x-oss-process=image/format,png)
+
 注: 登录页面的背景图片引用自知乎首页, 请自行更换.
 
 有任何问题或者建议, 欢迎联系交流!
